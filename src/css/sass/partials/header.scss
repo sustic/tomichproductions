@@ -16,6 +16,9 @@
 	background: rgba(0,0,0,0.2);
 	z-index: 3;
 	transition: background-color 0.2s;
+	&:hover{
+		background-color: rgba(0,0,0,0.9);
+	}
 	.logo {
 		width: 17rem;
 		float: left;

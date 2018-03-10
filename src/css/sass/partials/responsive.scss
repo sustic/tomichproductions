@@ -3,6 +3,23 @@
  * ---
  */
 
+@media only screen and (max-width:1200px) {
+	.home-content-section-light {
+		.home-content-sub-wrapper{
+			width: 75%;
+		}
+	}
+	.home-content-section-light {
+		.home-content-section-devider-left{
+			width: 75%;
+		}
+	}
+	.home-content-section-light {
+		.client-logos{
+			width: 90%;
+		}
+	}
+}
 @media only screen and (max-width:1024px) {
 	html{
 		font-size: 50%;
@@ -67,6 +84,9 @@
 			width: 95%;
 		}
 	}
+	.home-content-section-dark{
+		padding: 10rem 0;
+	}
 }
 
 @media only screen and (max-width:680px) {
@@ -87,10 +107,20 @@
 			}
 		}
 	}
+	.home-content-section-light {
+		.home-content-sub-wrapper{
+			width: 90%;
+		}
+	}
+	.home-content-section-light {
+		.home-content-section-devider-left{
+			width: 90%;
+		}
+	}
 }
 
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:520px) {
 	.home-head-section{
 		.home-head-content{
 			h1{
@@ -107,6 +137,15 @@
 				font-size: 1.4rem;
 				width: 100%;
 			}
+		}
+	}
+	.home-content-section-dark, .home-content-section-light{
+		padding: 7rem 0;
+		h3{
+			font-size: 2.7rem;
+		}
+		p{
+			font-size: 1.8rem;
 		}
 	}
 }
