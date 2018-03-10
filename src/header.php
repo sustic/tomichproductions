@@ -26,40 +26,53 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+
+		<!-- header -->
+		<header class="header clear" role="banner">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="<?php echo esc_url( home_url() ); ?>">
+						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg" alt="Logo" class="logo-img">
+					</a>
+				</div>
+				<!-- /logo -->
+
+				<!-- nav -->
+				<nav class="nav" role="navigation">
+					<?php html5blank_nav(); ?>
+					<ul class="language-switcher">
+						<li><a href="#">Hrvatski</a></li>
+						<li>|</li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</nav>
+				<!-- /nav -->
+
+		</header>
+
 		<!-- wrapper -->
 		<div class="wrapper">
+		<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/home-background-lens.png" alt="Logo" class="logo-img">
 
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo esc_url( home_url() ); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
 			<!-- /header -->
-			<div class="your-class">
-				<div>your content</div>
-				<div>your content</div>
-				<div>your content</div>
-			</div>
-			<script type="text/javascript">
-				jQuery(document).ready(function(){
-					jQuery('.your-class').slick();
-				});
-			</script>
+<!-- EXAMPLE SLICK & FANCYBOX
+	<div class="your-class">
+		<div>your content</div>
+		<div>your content</div>
+		<div>your content</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('.your-class').slick();
+		});
+	</script>
 
-
-<a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"></a>
-<a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"></a>
+	<a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg">
+		<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg">
+	</a>
+	<a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg">
+		<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg">
+	</a>
+-->

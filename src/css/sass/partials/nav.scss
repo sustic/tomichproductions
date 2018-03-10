@@ -5,7 +5,55 @@
  */
 
 
-.nav {}
+.nav {
+	float: right;
+	font-size: 1.6rem;
+	font-weight: normal;
+	padding: 2.52rem 0;
+	//font-family: $font-light;
+	ul {
+		list-style: none;
+		display: inline;
+		margin: 0 0 0 1.5rem;
+		padding: 0;
+		li{
+			display: inline;
+			margin-left: 1.5rem;
+			border-bottom: 1px solid transparent;
+			transition: border-bottom 0.2s, color 0.2s;
+			&:hover{
+				//border-bottom: 1px solid $white;
+				color: $red;
+			}
+			&:first-child{
+				margin-left: 0;
+			}
+			a{
+				color: $white;
+				transition: color 0.2s;
+				&:hover, &:focus, &:active{
+					text-decoration: none;
+					color: $red;
+				}
+			}
+		}
+		&.language-switcher{
+			font-size: 1.2rem;
+			li{
+				margin-left: 0.5rem;
+				&:first-child{
+					margin-left: 0;
+				}
+				a{
+					color: $grey;
+					&:hover{
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+}
 
 .menu {}
 

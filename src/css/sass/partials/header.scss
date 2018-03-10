@@ -5,7 +5,30 @@
 
 
 // Header container
-.header {}
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: auto;
+	padding: 1rem 3rem;
+	overflow: hidden;
+	background: rgba(0,0,0,0.2);
+	z-index: 3;
+	/*
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: start;
+	*/
+	.logo {
+		width: 17rem;
+		float: left;
+		padding-top: 0.3rem;
+	}
+}
 
 // Logo
 .logo {}
