@@ -1,0 +1,60 @@
+/**
+ * partials/responsive
+ */
+
+@media only screen and (max-width:1024px) {
+	html{
+		font-size: 50%;
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.header{
+		.logo{
+			width: 12rem;
+			position: relative;
+			z-index: 4;
+		}
+		.mobile-menu-toogler{
+			display: block;
+			float: right;
+			margin-top: 0.5rem;
+			position: relative;
+			z-index: 4;
+		}
+		&.mobile-active{
+			background-color: $black;
+			.nav{
+				top: 7rem;
+			}
+		}
+	}
+	.nav{
+		padding: 1.432rem 0 3rem 0;
+		text-align: center;
+		width: 100%;
+		background: #191c24;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: -40rem;
+		z-index: 2;
+		border-bottom: 1px solid $grey;
+		ul{
+			margin: 0;
+			display: block;
+			li{
+				margin: 0;
+				display: block;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+			}
+		}
+		ul.language-switcher{
+			li{
+				display: inline;
+			}
+		}
+	}
+}
+
