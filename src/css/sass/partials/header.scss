@@ -16,14 +16,6 @@
 	background: rgba(0,0,0,0.2);
 	z-index: 3;
 	transition: background-color 0.2s;
-	/*
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: start;
-	*/
 	.logo {
 		width: 17rem;
 		float: left;
@@ -31,6 +23,7 @@
 	}
 	.mobile-menu-toogler{
 		display: none;
+		cursor: pointer;
 	}
 }
 

@@ -10,7 +10,6 @@
 	font-size: 1.6rem;
 	font-weight: normal;
 	padding: 2.52rem 0;
-	//font-family: $font-light;
 	transition: top 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	ul {
 		list-style: none;
@@ -23,7 +22,6 @@
 			border-bottom: 1px solid transparent;
 			transition: border-bottom 0.2s, color 0.2s;
 			&:hover{
-				//border-bottom: 1px solid $white;
 				color: $red;
 			}
 			&:first-child{

@@ -1,0 +1,77 @@
+/**
+ * partials/home
+ * ---
+ */
+
+.home-head-section{
+	width: 100%;
+	height: 100vh;
+	background-image: url('img/home-background-lens.png');
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+	.home-head-content{
+		width: 50%;
+		color: $white;
+		.home-head-devider{
+			width: 100%;
+			height: 1px;
+			background-color: $white;
+			margin: 3rem 0 2rem 0;
+		}
+		h1{
+			font-family: 'sinkin_sans100_thin';
+			padding: 0;
+			padding-left: 1rem;
+			margin: 0;
+			font-size: 4.5rem;
+			max-width: 70rem;
+			line-height: 1.1
+		}
+		h2{
+			font-family: 'sinkin_sans400_regular';
+			padding: 0;
+			padding-left: 1rem;
+			margin: 0;
+			font-size: 2.5rem;
+			max-width: 70rem;
+		}
+		.cta-button {
+			padding: 0.5rem 1.8rem;
+			border-radius: 3rem;
+			border: 1px solid transparent;
+		}
+		.blue-cta {
+			background-color: #0d92fa;
+			transition: background-color 0.2s, border 0.2s;
+			letter-spacing: 1px;
+		}
+		.red-cta {
+			background-color: #cf1545;
+			transition: background-color 0.2s, border 0.2s;
+		}
+		.cta_sentence {
+			a{
+				font-family: 'sinkin_sans400_regular';
+				font-size: 1.8rem;
+				color: white;
+			}
+			span{
+				font-family: 'sinkin_sans100_thin';
+				font-size: 2.2rem;
+				padding: 0 1rem 0 1rem;
+			}
+		}
+		.blue-cta:hover, .red-cta:hover {
+			background-color: transparent;
+			border: 1px solid white;
+			text-decoration: none;
+		}
+	}
+}
+
+

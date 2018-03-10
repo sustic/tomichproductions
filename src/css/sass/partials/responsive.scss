@@ -1,10 +1,16 @@
 /**
  * partials/responsive
+ * ---
  */
 
 @media only screen and (max-width:1024px) {
 	html{
 		font-size: 50%;
+	}
+	.home-head-section{
+		.home-head-content{
+			width: 65%;
+		}
 	}
 }
 
@@ -56,5 +62,51 @@
 			}
 		}
 	}
+	.home-head-section{
+		.home-head-content{
+			width: 95%;
+		}
+	}
 }
 
+@media only screen and (max-width:680px) {
+	.home-head-section{
+		.home-head-content{
+			width: 100%;
+			padding: 0 5%;
+			h1{
+				text-align: center;
+				max-width: 100%;
+			}
+			h2{
+				text-align: center;
+				max-width: 100%;
+			}
+			p{
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width:500px) {
+	.home-head-section{
+		.home-head-content{
+			h1{
+				font-size: 3.5rem;
+			}
+			h2{
+				font-size: 2rem;
+			}
+			p{
+				font-size: 1.4rem;
+			}
+			.cta_sentence a{
+				display: block;
+				font-size: 1.4rem;
+				width: 100%;
+			}
+		}
+	}
+}
