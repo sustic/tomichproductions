@@ -93,6 +93,12 @@
 	.home-content-section-dark{
 		padding: 10rem 0;
 	}
+	.video-reference-wrapper{
+		.single-video-referenca{
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
 }
 
 @media only screen and (max-width:680px) {
@@ -150,6 +156,11 @@
 	.gallery-slider-wrapper .gallery-devider .gallery-button-holder {
 		width: 30%;
 	}
+	.video-reference-wrapper{
+		.single-video-referenca{
+			width: 80%;
+		}
+	}
 }
 
 
@@ -179,6 +190,11 @@
 		}
 		p{
 			font-size: 1.8rem;
+		}
+	}
+	.video-reference-wrapper{
+		.single-video-referenca{
+			width: 90%;
 		}
 	}
 }

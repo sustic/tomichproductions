@@ -17,11 +17,12 @@
 	// check if the flexible content field has rows of data
 	if( have_rows('segment') ):
 		// loop through the rows of data
+		$sliderNo = 0;
 		while ( have_rows('segment') ) : the_row();
 			if( get_row_layout() == 'sliding_gallery' ):
 ?>
 <div class="gallery-slider-wrapper">
-	<div class="your-class">
+	<div class="slider-no<?php echo $sliderNo; ?>">
 	<?php
 
 					// check if the repeater field has rows of data
@@ -105,37 +106,78 @@
 					endif;
 	?>
 	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('.slider-no<?php echo $sliderNo; $sliderNo++; ?>').slick({
+				dots: true,
+				arrows: true,
+				infinite: false,
+				speed: 500,
+				autoplay: false,
+				autoplaySpeed: 3500,
+				adaptiveHeight: true,
+				slidesToShow: 1,
+				responsive: [
+				{
+					breakpoint: 650,
+					settings: {
+						arrows: false
+					}
+				}]
+			});
+		});
+	</script>
 </div>
 <?php
-			elseif( get_row_layout() == 'download' ): 
-				$file = get_sub_field('file');
+			elseif( get_row_layout() == 'video_reference' ):
+?>
+<div class="video-reference-wrapper">
+<?php
+			// check if the repeater field has rows of data
+			if( have_rows('reference_video') ):
+				$videoNo = 0;
+				// loop through the rows of data
+				while ( have_rows('reference_video') ) : the_row();
+?>
+				<div class="single-video-referenca">
+					<?php 
+					$image = get_sub_field('slika');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['sizes']['video-galerija']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+					<h3><?php the_sub_field('naslov'); ?></h3>
+					<div class="video-devider">
+						<div class="video-devider-line">
+							
+						</div>
+						<div class="video-button-holder">
+							<a data-fancybox="video-<?php echo $videoNo; $videoNo++;  ?>" href="<?php the_sub_field('video_link'); ?>"><span class="video-button-arrow">PLAY</span></a>
+						</div>
+					</div>
+					
+					<p>Ime klijenta: <span><?php the_sub_field('klijent'); ?></span></p>
+					<p><?php the_sub_field('opisni_tekst'); ?></p>
+					
+				</div>
+<?php
+				endwhile;
+			else :
+			// no rows found
+			endif;
+?>
+</div>
+
+
+<?php
+			elseif( get_row_layout() == 'video_referenceasasas' ):
+?>
+<?php
 			endif;
 		endwhile;
 	else :
 	// no layouts found
 	endif;
 ?>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('.your-class').slick({
-			dots: true,
-			arrows: true,
-			infinite: false,
-			speed: 500,
-			autoplay: false,
-			autoplaySpeed: 3500,
-			adaptiveHeight: true,
-			slidesToShow: 1,
-			responsive: [
-			{
-				breakpoint: 650,
-				settings: {
-					arrows: false
-				}
-			}]
-		});
-	});
-</script>
 
 
 <?php get_footer(); ?>
