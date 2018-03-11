@@ -129,7 +129,7 @@
 	</script>
 </div>
 <?php
-			elseif( get_row_layout() == 'video_reference' ):
+		elseif( get_row_layout() == 'video_reference' ):
 ?>
 <div class="video-reference-wrapper">
 <?php
@@ -169,15 +169,78 @@
 
 
 <?php
-			elseif( get_row_layout() == 'video_referenceasasas' ):
+		elseif( get_row_layout() == 'foto_reference' ):
 ?>
-<?php
-			endif;
-		endwhile;
-	else :
-	// no layouts found
-	endif;
-?>
+		<div class="foto-reference-wrapper">
+		<?php
+					// check if the repeater field has rows of data
+					if( have_rows('reference_foto') ):
+						$fotoNo = 0;
+						// loop through the rows of data
+						while ( have_rows('reference_foto') ) : the_row();
+		?>
+						<div class="single-foto-referenca">
+							<?php 
+							$image = get_sub_field('slika');
+							if( !empty($image) ): ?>
+								<img src="<?php echo $image['sizes']['video-galerija']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<?php endif; ?>
+							<h3><?php the_sub_field('naslov'); ?></h3>
+							<div class="foto-devider">
+								<div class="foto-devider-line">
+									
+								</div>
+								<div class="foto-button-holder">
+
+									<?php
+										// check if the repeater field has rows of data
+										if( have_rows('slike_za_galeriju') ):
+											// loop through the rows of data
+											$fotoNoo = 0;
+											while ( have_rows('slike_za_galeriju') ) : the_row();
+									?>
+										<?php if( $fotoNoo != 0 ) { ?>
+											<a data-fancybox="asafoto-<?php echo $fotoNo; ?>" href="<?php echo get_sub_field('slika_galerije')['url']; ?>">
+											</a>
+										<?php } ?>
+										<?php if( $fotoNoo == 0 ) { ?>
+											<a data-fancybox="asafoto-<?php echo $fotoNo; ?>" href="<?php echo get_sub_field('slika_galerije')['url']; $fotoNoo++;?>">
+												<span class="foto-button-arrow">GALERIJA</span>
+											</a>
+										<?php } ?>
+									<?php
+
+											endwhile;
+											
+										else :
+										// no rows found
+										endif;
+									?>
+
+								</div>
+							</div>
+							
+							<p>Ime klijenta: <span><?php the_sub_field('klijent'); ?></span></p>
+							<p><?php the_sub_field('opisni_tekst'); ?></p>
+							
+						</div>
+		<?php
+						$fotoNo++;
+						endwhile;
+
+					else :
+					// no rows found
+					endif;
+		?>
+		</div>
+
+	<?php
+				endif;
+			endwhile;
+		else :
+		// no layouts found
+		endif;
+	?>
 
 
 <?php get_footer(); ?>
