@@ -2,7 +2,13 @@
  * partials/responsive
  * ---
  */
-
+@media only screen and (max-width:1440px) {
+	.footer {
+		.footer-sub-section{
+			width: 50%;
+		}
+	}
+}
 @media only screen and (max-width:1200px) {
 	.home-content-section-light {
 		.home-content-sub-wrapper{
@@ -117,6 +123,27 @@
 			width: 90%;
 		}
 	}
+	.footer {
+		.footer-sub-section{
+			width: 90%;
+			h3{
+				text-align: center;
+			}
+			p{
+				text-align: center;
+			}
+			iframe{
+				display: block;
+				margin: 0 auto;
+				float: none;
+			}
+		}
+		.footer-form{
+			ul{
+				padding: 0;
+			}
+		}
+	}
 }
 
 
@@ -139,7 +166,7 @@
 			}
 		}
 	}
-	.home-content-section-dark, .home-content-section-light{
+	.home-content-section-dark, .home-content-section-light, .footer{
 		padding: 7rem 0;
 		h3{
 			font-size: 2.7rem;
