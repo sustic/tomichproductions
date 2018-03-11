@@ -91,9 +91,9 @@ function html5blank_nav() {
 function html5blank_header_scripts() {
     if ( $GLOBALS['pagenow'] != 'wp-login.php' && ! is_admin() ) {
         if ( HTML5_DEBUG ) {
-            // jQuery
-            wp_deregister_script( 'jquery' );
-            wp_register_script( 'jquery', get_template_directory_uri() . '/js/lib/jquery.js', array(), '1.11.1' );
+            // jQuery restarted to original WP jQuery because of conflict with gravity forms plugin
+            //wp_deregister_script( 'jquery' );
+            //wp_register_script( 'jquery', get_template_directory_uri() . '/js/lib/jquery.js', array(), '1.11.1' );
 
             // Conditionizr
             wp_register_script( 'conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0' );
@@ -119,8 +119,9 @@ function html5blank_header_scripts() {
                     'modernizr',
                     'slickslider',
                     'fancybox',
-                    'markajs',
-                    'jquery'
+                    'markajs'
+                    // jQuery restarted to original WP jQuery because of conflict with gravity forms plugin
+                    //'jquery'
                 ),
                 '1.0.0' );
 
@@ -391,7 +392,7 @@ add_action( 'wp_print_scripts', 'html5blank_conditional_scripts' ); // Add Condi
 add_action( 'get_header', 'enable_threaded_comments' ); // Enable Threaded Comments
 add_action( 'wp_enqueue_scripts', 'html5blank_styles' ); // Add Theme Stylesheet
 add_action( 'init', 'register_html5_menu' ); // Add HTML5 Blank Menu
-add_action( 'init', 'create_post_type_html5' ); // Add our HTML5 Blank Custom Post Type
+//add_action( 'init', 'create_post_type_html5' ); // Add our HTML5 Blank Custom Post Type
 add_action( 'widgets_init', 'my_remove_recent_comments_style' ); // Remove inline Recent Comment Styles from wp_head()
 add_action( 'init', 'html5wp_pagination' ); // Add our HTML5 Pagination
 
@@ -427,8 +428,8 @@ add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); // Remove wi
 remove_filter( 'the_excerpt', 'wpautop' ); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode( 'html5_shortcode_demo', 'html5_shortcode_demo' ); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode( 'html5_shortcode_demo_2', 'html5_shortcode_demo_2' ); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+//add_shortcode( 'html5_shortcode_demo', 'html5_shortcode_demo' ); // You can place [html5_shortcode_demo] in Pages, Posts now.
+//add_shortcode( 'html5_shortcode_demo_2', 'html5_shortcode_demo_2' ); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
@@ -487,3 +488,8 @@ function html5_shortcode_demo( $atts, $content = null ) {
 function html5_shortcode_demo_2( $atts, $content = null ) {
     return '<h2>' . $content . '</h2>';
 }
+
+function gf_spinner_replace( $image_src, $form ) {
+    return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // relative to you theme images folder
+}
+add_filter( 'gform_ajax_spinner_url', 'gf_spinner_replace', 10, 2 );

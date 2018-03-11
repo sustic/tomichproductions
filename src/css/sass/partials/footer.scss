@@ -4,4 +4,168 @@
  */
 
 
-.footer {}
+.footer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 15rem 0;
+	.footer-content-center{
+		width: 100%;
+		text-align: center;
+		h2{
+			text-align: center;
+			font-family: 'sinkin_sans100_thin';
+			color: $white;
+			margin: 0;
+			padding: 0 0 2rem 0;
+			font-size: 5rem;
+		}
+	}
+	.footer-sub-section{
+		overflow: hidden;
+		width: 30%;
+		padding: 1rem;
+		h3{
+			color: $blue;
+			font-family: 'sinkin_sans100_thin';
+			font-size: 4rem;
+			text-align: right;
+			line-height: 1.2;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 2rem;
+		}
+		p{
+			color: $white;
+			font-family: 'sinkin_sans100_thin';
+			text-align: right;
+			font-size: 2rem;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 1.5rem;
+		}
+		iframe{
+			width: 90%;
+			float: right;
+		}
+	}
+}
+
+.footer-form{
+	.validation_error{
+		display: none;
+	}
+	.validation_message{
+		color: $red;
+		font-family: 'sinkin_sans100_thin';
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		padding-left: 5rem;
+		padding-right: 5rem;
+		li{
+			width: 100%;
+			margin-bottom: 3rem;
+			&.gfield_error {
+				input{
+					border-bottom: 1px solid $red;
+				}
+				textarea{
+					border-left:  1px solid $red;
+					border-right:  1px solid $red;
+					border-bottom: 1px solid $red;
+				}
+			}
+			label{
+				display: none;
+			}
+			input{
+				width: 100%;
+				border-left:  1px solid transparent;
+				border-right:  1px solid transparent;
+				border-bottom: 1px solid $grey;
+				border-top: 1px solid transparent;
+				background-color: $black;
+				font-size: 2rem;
+				font-family: 'sinkin_sans400_regular';
+				color: $white;
+				padding: 0.3rem 2rem;
+				transition: border 0.2s;
+				line-height: 1.5;
+				&:focus{
+					outline: none;
+					border: 1px solid $grey;
+				}
+			}
+			select{
+				width: 100%;
+				border-left:  1px solid transparent;
+				border-right:  1px solid transparent;
+				border-bottom: 1px solid $grey;
+				border-top: 1px solid transparent;
+				background-color: $black;
+				font-size: 2rem;
+				font-family: 'sinkin_sans400_regular';
+				color: $white;
+				padding: 0.3rem 2rem;
+				transition: border 0.2s;
+				line-height: 1.5;
+				&:focus{
+					outline: none;
+					border: 1px solid $grey;
+				}
+			}
+			textarea{
+				width: 100%;
+				border-left:  1px solid $grey;
+				border-right:  1px solid $grey;
+				border-bottom: 1px solid $grey;
+				border-top: 1px solid transparent;
+				background-color: $black;
+				font-size: 2rem;
+				font-family: 'sinkin_sans400_regular';
+				color: $white;
+				padding: 0.3rem 2rem;
+				transition: border 0.2s;
+				line-height: 1.5;
+				height: 20rem;
+				&:focus{
+					outline: none;
+					border: 1px solid $grey;
+				}
+			}
+		}
+
+	}
+	.gform_button {
+		background-color: $blue;
+		transition: background-color 0.2s, border 0.2s;
+		letter-spacing: 1px;
+		cursor: pointer;
+		color: $white;
+		text-transform: uppercase;
+		display: block;
+		margin: 0 auto;
+		font-family: 'sinkin_sans400_regular';
+		padding: 0.5rem 1.8rem;
+		border-radius: 3rem;
+		border: 1px solid transparent;
+		font-size: 2rem;
+		padding: 1rem 4rem;
+	}
+	.gform_button:hover{
+		background-color: transparent;
+		border: 1px solid white;
+		text-decoration: none;
+	}
+	.gform_confirmation_message{
+		text-align: center;
+		color: $blue;
+		font-size: 2rem;
+	}
+}

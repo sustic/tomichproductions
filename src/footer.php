@@ -1,13 +1,16 @@
 		<!-- footer -->
 		<footer class="footer" role="contentinfo">
-
-			<!-- copyright -->
-			<p class="copyright">
-				&copy; <?php echo esc_html( date( 'Y' ) ); ?> Copyright <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Powered by', 'html5blank' ); ?>
-				<a href="//wordpress.org" target="_blank">WordPress</a> &amp; <a href="//html5blank.com" target="_blank">HTML5 Blank</a>.
-			</p>
-			<!-- /copyright -->
-
+			<div class="footer-content-center">
+				<h2>Kontakt</h2>
+			</div>
+			<div class="footer-sub-section">
+				<h3>Bez obaveze i sa povjerenjem</h3>
+				<p>Kontaktirajte nas sa svojom idejom a naši stručnjaci će vam se povratno javiti kako bi zajedno ostvarili vaš cilj.</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d89003.33118279495!2d15.990079078503564!3d45.8041663229042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2shr!4v1520770903964" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="footer-sub-section footer-form">
+				<?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' ); ?>
+			</div>
 		</footer>
 		<!-- /footer -->
 
@@ -15,14 +18,6 @@
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->
-		<script>
-		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
-		</script>
 
 	</body>
 </html>
