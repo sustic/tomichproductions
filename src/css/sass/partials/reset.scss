@@ -84,3 +84,7 @@ h1, h2, h3, h4, h5, h6{
     transform: rotate(360deg);
   }
 }
+
+.fancybox-button--play, .fancybox-button--fullscreen, .fancybox-button--thumbs, .fancybox-button--share{
+  display: none!important;
+}
