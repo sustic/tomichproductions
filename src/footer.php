@@ -1,4 +1,5 @@
 		<!-- footer -->
+		<a name="kontakt"></a>
 		<footer class="footer" role="contentinfo">
 			<div class="footer-content-center">
 				<h2>Kontakt</h2>
