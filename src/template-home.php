@@ -39,5 +39,9 @@
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/clients/oracle.jpg">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/clients/zracna_plovidba.jpg">
 		</div>
+		<div class="home-content-center">
+			<h2>Pogledajte naše radove</h2>
+			<a href="#" class="blue-cta cta-button center-button" title="">Reference</a>
+		</div>
 	</section>
 <?php get_footer(); ?>

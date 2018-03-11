@@ -152,16 +152,15 @@
 		font-size: 1.3rem;
 		margin-top: 0;
 		margin-bottom: 0;
+		padding: 0.5rem 1.8rem;
+		border-radius: 3rem;
+		border: 1px solid transparent;
+		text-transform: uppercase;
 	}
 	.blue-cta {
 		background-color: #0d92fa;
 		transition: background-color 0.2s, border 0.2s;
 		letter-spacing: 1px;
-	}
-	.cta-button {
-		padding: 0.5rem 1.8rem;
-		border-radius: 3rem;
-		border: 1px solid transparent;
 		&:hover{
 			background-color: $white;
 			border-color: $blue;
@@ -178,15 +177,32 @@
 		align-items: center;
 		align-content: flex-start;
 		width: 50%;
-		padding-top: 6rem;
-		margin: 0 auto;
+		padding-top: 16rem;
+		margin: 0 auto 10rem auto;
 		img {
 			opacity: 0.8;
 			transition: opacity 0.2s;
 			cursor: pointer;
+			margin: 1rem;
 			&:hover{
 				opacity: 1;
 			}
+		}
+	}
+	.home-content-center{
+		width: 90%;
+		margin: 0 auto;
+		h2{
+			text-align: center;
+			font-family: 'sinkin_sans100_thin';
+			color: $grey;
+			font-size: 5rem;
+		}
+		.center-button{
+			margin: 0 auto;
+			display: block;
+			max-width: 20rem;
+			text-align: center;
 		}
 	}
 }
