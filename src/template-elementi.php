@@ -1,18 +1,18 @@
 <?php /* Template Name: Elementi Page Template */ get_header(); ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<?php 
+
+$image = get_field('header_slika');
+
+if( !empty($image) ): ?>
+
+<section class="header-section-elements" style="background-image: url('<?php echo $image['url']; ?>')">
+	<h1><?php the_field('header_natpis'); ?></h1>
+	<div class="page-header-devider"></div>
+</section>
+<?php endif; ?>
+
+
 <?php
 	// check if the flexible content field has rows of data
 	if( have_rows('segment') ):

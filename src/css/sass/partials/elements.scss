@@ -229,3 +229,27 @@
 		}
 	}
 }
+
+.header-section-elements{
+	width: 100%;
+	height: 35rem;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 10rem;
+	padding-top: 20rem;
+	h1{
+		padding: 0;
+		margin: 1rem auto;
+		text-align: center;
+		font-family: 'sinkin_sans100_thin';
+		color: $white;
+		font-size: 4.5rem;
+		clear: right;
+	}
+	.page-header-devider{
+		float: right;
+		width: 50%;
+		height: 1px;
+		background-color: $white;
+	}
+}

@@ -52,6 +52,12 @@
 			width: 65%;
 		}
 	}
+
+	.header-section-elements{
+		height: 25rem;
+		padding-top: 12rem;
+	}
+
 }
 
 @media only screen and (max-width:768px) {
@@ -131,6 +137,9 @@
 				}
 			}
 		}
+	}
+	.header-section-elements{
+		margin-bottom: 5rem;
 	}
 
 
